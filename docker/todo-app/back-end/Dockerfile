@@ -1,6 +1,6 @@
-FROM node:14-alpine AS todolist
+FROM node:14-alpine AS todobackend
 
-WORKDIR /home/arthur/trybe-projects/back-end/sd-024-b-project-docker-todo-list/docker/todo-app/back-end
+WORKDIR /todo-app
 
 EXPOSE 3001
 
