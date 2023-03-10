@@ -1,21 +1,19 @@
-# Trybe Wallet
-[Trybe](https://www.betrybe.com/) Project - Trybe Wallet React App.
+# [Trybe](https://www.betrybe.com/) Project - Docker Todo List
 
 ## 💻 Project
-React App for personal expenses management.
+
+"Containerization" of frontend, backend and test applications using Docker, creating a connection between them and orchestrating their operation.
 
 ## 🚀 Built With
 
-> [![Javascript][Javascript]][Javascript-url][![React][React.js]][React-url][![Redux][React-Redux.js]][React-Redux-url]
+> [![Bash][Bash]][Bash-url][![Docker][Docker]][Docker-url]
 
 ## 📌 Skills
 
-- Producing of React Class Components with JSX synthax;
-- Rendering React Components from Array of Objects;
-- Props and PropType validation;
-- Creating and configuring a Redux store with thunk middleware;
-- Creating, Structuring and Combining Redux reducers;
-- Creating and dispatching actions and asynchronous actions;
+- Using Docker commands in the CLI;
+- Create Docker images of applications;
+- Create and run Docker containers;
+- Orchestrate containers using Docker Compose.
 
 ## Getting Started
 
@@ -23,9 +21,19 @@ React App for personal expenses management.
 
 ```bash
 npm install
+cd docker
 ``` 
 
 ### ⚡ Running the Aplication
+
+Initially build the back-end, front-end and test images:
+
+```bash
+docker image build -t todobackend ./todo-app/back-end
+docker image build -t todofrontend ./todo-app/front-end
+docker image build -t todotests ./todo-app/tests
+```
+Then orchestrate the containers:
 
 ```bash
 npm start
@@ -45,9 +53,14 @@ Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais
 
 [⬆ Voltar ao topo](#nome-do-projeto)<br> -->
 
+
+[Bash]: https://img.shields.io/badge/GNU_bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white
+[Bash-url]: https://www.gnu.org/software/bash/
 [Javascript]: https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white
 [Javascript-url]: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [React-Redux.js]: https://img.shields.io/badge/react_redux-764ABC?style=for-the-badge&logo=redux&logoColor=white
 [React-Redux-url]: https://react-redux.js.org/
+[Docker]: https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://www.docker.com/
